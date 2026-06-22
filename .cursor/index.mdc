@@ -1,0 +1,61 @@
+---
+alwaysApply: true
+---
+
+# Unity Project Rules (Unity 2022.3 LTS)
+
+## Project Overview
+
+This project uses Unity 2022.3 LTS with a focus on AssetBundle management and MCP automation.
+
+## Tech Stack
+
+- **Unity Version**: 2022.3 LTS
+- **C# Version**: 9.0 (with .NET Standard 2.1)
+- **Rendering Pipeline**: URP (Universal Render Pipeline)
+- **Input System**: New Input System (optional, not actively used)
+- **UI Framework**: Not yet defined (can use UGUI or UI Toolkit)
+- **Asset Management**: AssetBundle (built-in)
+- **Testing**: Unity Test Framework (optional)
+
+## Architectural Principles
+
+### 1. Modularity
+- Each system should be independent
+- Use ScriptableObject for configuration where appropriate
+- Prefer composition over inheritance
+
+### 2. Performance
+- Object pooling for frequently instantiated objects
+- AssetBundles instead of Resources for dynamic content
+- Avoid expensive operations in Update (cache references)
+
+### 3. Maintainability
+- Follow naming conventions (PascalCase for public, _camelCase for private)
+- XML documentation for public APIs
+- Keep scripts focused and small
+
+### 4. Code Style
+- Follow the **Unity Convention Guide** (official Unity coding standards)
+- Follow Microsoft C# conventions where Unity-specific rules don't apply
+- Use modern C# features where supported (pattern matching, etc.)
+- Prefer async/await over coroutines when possible
+
+## Supported Platforms
+
+- Windows (Primary)
+
+## Important Rules
+
+✅ **ALWAYS**:
+- Use AssetBundles for dynamic content loading
+- Use [SerializeField] for inspector-visible fields
+- Cache component references in Awake/Start
+- Use meaningful names for assets and scripts
+- Follow Unity Convention Guide for naming and structure
+
+❌ **NEVER**:
+- Use Resources.Load for production content
+- Use FindObjectOfType in Update loops
+- Hardcode magic numbers (use constants or config)
+- Use legacy Input System (unless explicitly required)
