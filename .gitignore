@@ -110,3 +110,6 @@ InitTestScene*.unity*
 
 # Rider
 .idea/
+
+# Assets Bundles
+BuiltBundles/
