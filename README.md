@@ -33,10 +33,9 @@ Rules взяты из репозитория **[Common-ka/ai-agent-unity-rules](
     - `art_bundle` (корневой) — включает все файлы в `Art`, **кроме** папки `Art/UI` (файлы верхнего уровня + Environment + Characters).
     - `ui_bundle` (вложенный) — включает только файлы внутри `Art/UI`.
 - Бандлы собраны в папку `BuiltBundles/` с физической структурой:
-  BuiltBundles/
-  ├── art_bundle # лежит прямо в корне BuiltBundles
-  └── UI/
-  └── ui_bundle # лежит внутри подпапки UI
+  BuiltBundles/ 
+  - ├── art_bundle # лежит прямо в корне BuiltBundles 
+  - └── UI/ui_bundle # лежит внутри подпапки UI
 
 ## Примеры промптов для агента
 
